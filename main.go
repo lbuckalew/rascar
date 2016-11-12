@@ -3,7 +3,8 @@ package main
 import "github.com/lbuckalew/blulang"
 
 func main() {
-	var BTadapter blulang.Adapter
-
-	BTadapter.GetAdapter()
+	a := &blulang.Adapter{}
+	if err := a.Init(); err != nil {
+		panic(err)
+	}
 }
